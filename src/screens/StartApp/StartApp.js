@@ -19,11 +19,11 @@ const startApp = () => {
                     ]
                 }
             },
-            /*drawer: {
+            drawer: {
                 right: {
                     screen: "geovcs.SideDrawerScreen"
                 }
-            }*/
+            }
         })
     })
 }
