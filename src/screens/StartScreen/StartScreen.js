@@ -15,6 +15,13 @@ class StartScreen extends Component {
         }
     }
 
+    createNewProjectHandler = () => {
+        this.props.navigator.push({
+            screen: "geovcs.CreateProjectScreen",
+            title: "Create New Project"
+        })
+    }
+
     startCodingHandler = () => {
         this.props.navigator.push({
             screen: "geovcs.CodeScreen",
@@ -28,7 +35,7 @@ class StartScreen extends Component {
             <View >
                 <View>
                     <TouchableOpacity>
-                        <Text style = {styles.btnForm}>
+                        <Text style = {styles.btnForm} onPress={this.createNewProjectHandler}>
                             New Project
                         </Text>
                     </TouchableOpacity>
