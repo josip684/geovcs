@@ -6,3 +6,7 @@ export const createProject = (projectName) => {
         createdProject: projectName
     }
 }
+
+export const getAllProjects = () => {
+    
+}

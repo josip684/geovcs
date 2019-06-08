@@ -46,7 +46,7 @@ class CodeScreen extends Component {
     }
 
     endCodingHandler = () => {
-        RNFS.readDir(RNFS.DocumentDirectoryPath).then(result => alert(result[0].path.toString())).catch(error => {alert(error)})
+        RNFS.readDir(RNFS.ExternalDirectoryPath ).then(result => alert(result[0].path.toString())).catch(error => {alert(error)})
         //RNFS.writeFile('data/project1.txt', 'Project1', 'utf8').then(success =>{}).catch(error => {alert(error)})
     }
 
