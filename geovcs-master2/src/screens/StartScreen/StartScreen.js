@@ -30,6 +30,14 @@ class StartScreen extends Component {
         
     }
 
+    layerConfigHandler = () => {
+        this.props.navigator.push({
+            screen: "geovcs.LayerConfigScreen",
+            title: "Layer Config"
+        })
+        
+    }
+
     render() {
         return(
             <View >
@@ -55,7 +63,7 @@ class StartScreen extends Component {
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity>
-                        <Text style = {styles.btnForm}>
+                        <Text style = {styles.btnForm} onPress={this.layerConfigHandler}>
                             Layer Config
                         </Text>
                     </TouchableOpacity>
@@ -90,13 +98,7 @@ const styles = StyleSheet.create({
         padding: 10,
         textAlignVertical: "center",
         color: 'black'
-        
-        
-          
-          
       }
-    
 })
-
 
 export default StartScreen
