@@ -1,7 +1,8 @@
 import * as actionTypes from '../actions/actionTypes'
 
 const initState = {
-    currentProject: ""
+    currentProject: "",
+    projectsList: []
 }
 
 export default projectReducer = (state = initState, action) => {
@@ -9,7 +10,8 @@ export default projectReducer = (state = initState, action) => {
         case actionTypes.CREATE_PROJECT:
             return {
                 ...state,
-                currentProject: action.createdProject
+                currentProject: action.createdProject,
+                projectsList: state.projectsList.concat(action.createdProject)
             }
         default: 
             return state

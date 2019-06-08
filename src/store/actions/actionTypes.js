@@ -1,1 +1,2 @@
 export const CREATE_PROJECT = 'CREATE_PROJECT'
+export const GET_ALL_PROJECTS = 'GET_ALL_PROJECTS'
